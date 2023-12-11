@@ -1,0 +1,647 @@
+[
+    {
+      "id": "text-group1",
+      "groupId": "c.0*",
+      "label": "Ancient literary catalogues",
+      "children": [
+        {
+          "id": "text-group2",
+          "groupId": "c.0.1*",
+          "children": [],
+          "label": "Ur III"
+        },
+        {
+          "id": "text-group3",
+          "groupId": "c.0.2*",
+          "children": [],
+          "label": "Old Babylonian"
+        }
+      ]
+    },
+    {
+      "id": "text-group4",
+      "groupId": "c.1*",
+      "children": [
+        {
+          "id": "text-group5",
+          "groupId": "",
+          "children": [
+            {
+              "id": "text-group6",
+              "groupId": "c.1.1*",
+              "children": [],
+              "label": "Enki"
+            },
+            {
+              "id": "text-group7",
+              "groupId": "c.1.2*",
+              "children": [],
+              "label": "Enlil"
+            },
+            {
+              "id": "text-group8",
+              "groupId": "c.1.3*",
+              "children": [],
+              "label": "Inana"
+            },
+            {
+              "id": "text-group9",
+              "groupId": "c.1.4*",
+              "children": [],
+              "label": "Inana and Dumuzid"
+            },
+            {
+              "id": "text-group10",
+              "groupId": "c.1.5*",
+              "children": [],
+              "label": "Nanna-Suen"
+            },
+            {
+              "id": "text-group11",
+              "groupId": "c.1.6*",
+              "children": [],
+              "label": "Ninurta"
+            },
+            {
+              "id": "text-group12",
+              "groupId": "c.1.7*",
+              "children": [],
+              "label": "Other deities"
+            }
+          ],
+          "label": "Narratives featuring deities"
+        },
+        {
+          "id": "text-group13",
+          "groupId": "",
+          "children": [
+            {
+              "id": "text-group14",
+              "groupId": "c.1.8.1*",
+              "children": [],
+              "label": "Gilgameš"
+            },
+            {
+              "id": "text-group15",
+              "groupId": "c.1.8.2*",
+              "children": [],
+              "label": "Lugalbanda and Enmerkar"
+            }
+          ],
+          "label": "Narratives featuring heroes"
+        }
+      ],
+      "label": "Narrative and mythological compositions"
+    },
+    {
+      "id": "text-group16",
+      "groupId": "",
+      "children": [
+        {
+          "id": "text-group17",
+          "groupId": "c.2.1*",
+          "children": [],
+          "label": "King lists and other compositions"
+        },
+        {
+          "id": "text-group18",
+          "groupId": "c.2.2*",
+          "children": [],
+          "label": "City laments"
+        }
+      ],
+      "label": "Compositions with a historical background"
+    },
+    {
+      "id": "text-group19",
+      "groupId": "",
+      "children": [
+        {
+          "id": "text-group20",
+          "groupId": "c.2.3*",
+          "children": [
+            {
+              "id": "text-group21",
+              "groupId": "c.2.3.1*",
+              "children": [],
+              "label": "Luma"
+            },
+            {
+              "id": "text-group22",
+              "groupId": "c.2.3.2*",
+              "children": [],
+              "label": "Gudea"
+            }
+          ],
+          "label": "Lagaš"
+        },
+        {
+          "id": "text-group23",
+          "groupId": "c.2.4*",
+          "children": [
+            {
+              "id": "text-group24",
+              "groupId": "c.2.4.1*",
+              "children": [],
+              "label": "Ur-Namma"
+            },
+            {
+              "id": "text-group25",
+              "groupId": "c.2.4.2*",
+              "children": [],
+              "label": "Šulgi"
+            },
+            {
+              "id": "text-group26",
+              "groupId": "c.2.4.3*",
+              "children": [],
+              "label": "Amar-Suena"
+            },
+            {
+              "id": "text-group27",
+              "groupId": "c.2.4.4*",
+              "children": [],
+              "label": "Šu-Suen"
+            },
+            {
+              "id": "text-group28",
+              "groupId": "c.2.4.5*",
+              "children": [],
+              "label": "Ibbi-Suen"
+            }
+          ],
+          "label": "Third Dynasty of Ur"
+        },
+        {
+          "id": "text-group29",
+          "groupId": "c.2.5*",
+          "children": [
+            {
+              "id": "text-group30",
+              "groupId": "c.2.5.1*",
+              "children": [],
+              "label": "Išbi-Erra"
+            },
+            {
+              "id": "text-group31",
+              "groupId": "c.2.5.2*",
+              "children": [],
+              "label": "Šu-ilīšu"
+            },
+            {
+              "id": "text-group32",
+              "groupId": "c.2.5.3*",
+              "children": [],
+              "label": "Iddin-Dagan"
+            },
+            {
+              "id": "text-group33",
+              "groupId": "c.2.5.4*",
+              "children": [],
+              "label": "Išme-Dagan"
+            },
+            {
+              "id": "text-group34",
+              "groupId": "c.2.5.5*",
+              "children": [],
+              "label": "Lipit-Eštar"
+            },
+            {
+              "id": "text-group35",
+              "groupId": "c.2.5.6*",
+              "children": [],
+              "label": "Ur-Ninurta"
+            },
+            {
+              "id": "text-group36",
+              "groupId": "c.2.5.7*",
+              "children": [],
+              "label": "Būr-Suen"
+            },
+            {
+              "id": "text-group37",
+              "groupId": "c.2.5.8*",
+              "children": [],
+              "label": "Enlil-bāni"
+            }
+          ],
+          "label": "Isin Dynasty"
+        },
+        {
+          "id": "text-group38",
+          "groupId": "c.2.6*",
+          "children": [
+            {
+              "id": "text-group39",
+              "groupId": "c.2.6.2*",
+              "children": [],
+              "label": "Gungunum"
+            },
+            {
+              "id": "text-group40",
+              "groupId": "c.2.6.6*",
+              "children": [],
+              "label": "Sîn-iddinam"
+            },
+            {
+              "id": "text-group41",
+              "groupId": "c.2.6.7*",
+              "children": [],
+              "label": "Sîn-iqīšam"
+            },
+            {
+              "id": "text-group42",
+              "groupId": "c.2.6.9*",
+              "children": [],
+              "label": "Rīm-Sîn"
+            }
+          ],
+          "label": "Larsa Dynasty"
+        },
+        {
+          "id": "text-group43",
+          "groupId": "c.2.7*",
+          "children": [
+            {
+              "id": "text-group44",
+              "groupId": "c.2.7.1*",
+              "children": [],
+              "label": "Anam"
+            }
+          ],
+          "label": "Uruk"
+        },
+        {
+          "id": "text-group45",
+          "groupId": "c.2.8*",
+          "children": [
+            {
+              "id": "text-group46",
+              "groupId": "c.2.8.2*",
+              "children": [],
+              "label": "Ḫammu-rābi"
+            },
+            {
+              "id": "text-group47",
+              "groupId": "c.2.8.3*",
+              "children": [],
+              "label": "Samsu-iluna"
+            },
+            {
+              "id": "text-group48",
+              "groupId": "c.2.8.5*",
+              "children": [],
+              "label": "Abī-ešuḫ"
+            }
+          ],
+          "label": "First Dynasty of Babylon"
+        },
+        {
+          "id": "text-group49",
+          "groupId": "",
+          "children": [
+            {
+              "id": "text-group50",
+              "groupId": "",
+              "children": [
+                {
+                  "id": "text-group51",
+                  "groupId": "c.2.8.5.b",
+                  "children": [],
+                  "label": "A hymn to Marduk for a king"
+                }
+              ],
+              "label": "Hymns"
+            },
+            {
+              "id": "text-group52",
+              "groupId": "",
+              "children": [
+                {
+                  "id": "text-group53",
+                  "groupId": "c.2.99*",
+                  "children": [],
+                  "label": "Fragmentary compositions"
+                }
+              ],
+              "label": "Fragmentary compositions"
+            }
+          ],
+          "label": "Praise poetry for unknown rulers"
+        }
+      ],
+      "label": "Royal praise poetry"
+    },
+    {
+      "id": "text-group54",
+      "groupId": "c.3*",
+      "children": [
+        {
+          "id": "text-group55",
+          "groupId": "",
+          "children": [
+            {
+              "id": "text-group56",
+              "groupId": "c.3.1*",
+              "children": [],
+              "label": "Third Dynasty of Ur"
+            },
+            {
+              "id": "text-group57",
+              "groupId": "c.3.2*",
+              "children": [],
+              "label": "Isin,  Larsa,  and other dynasties"
+            }
+          ],
+          "label": "Royal correspondence"
+        },
+        {
+          "id": "text-group58",
+          "groupId": "c.3.3*",
+          "children": [],
+          "label": "Other letters and letter-prayers"
+        }
+      ],
+      "label": "Literary letters and letter-prayers"
+    },
+    {
+      "id": "text-group59",
+      "groupId": "c.4*",
+      "children": [
+        {
+          "id": "text-group60",
+          "groupId": "c.4.0*",
+          "children": [
+            {
+              "id": "text-group61",
+              "groupId": "c.4.01*",
+              "children": [],
+              "label": "Asarluḫi"
+            },
+            {
+              "id": "text-group62",
+              "groupId": "c.4.02*",
+              "children": [],
+              "label": "Bau"
+            },
+            {
+              "id": "text-group63",
+              "groupId": "c.4.03*",
+              "children": [],
+              "label": "Damgalnuna"
+            },
+            {
+              "id": "text-group64",
+              "groupId": "c.4.05*",
+              "children": [],
+              "label": "Enlil"
+            },
+            {
+              "id": "text-group65",
+              "groupId": "c.4.06*",
+              "children": [],
+              "label": "Ḫendursaĝa"
+            },
+            {
+              "id": "text-group66",
+              "groupId": "c.4.07*",
+              "children": [],
+              "label": "Inana"
+            },
+            {
+              "id": "text-group67",
+              "groupId": "c.4.08*",
+              "children": [],
+              "label": "Inana and Dumuzid"
+            },
+            {
+              "id": "text-group68",
+              "groupId": "c.4.12*",
+              "children": [],
+              "label": "Martu"
+            },
+            {
+              "id": "text-group69",
+              "groupId": "c.4.13*",
+              "children": [],
+              "label": "Nanna"
+            },
+            {
+              "id": "text-group70",
+              "groupId": "c.4.14*",
+              "children": [],
+              "label": "Nanše"
+            },
+            {
+              "id": "text-group71",
+              "groupId": "c.4.15*",
+              "children": [],
+              "label": "Nergal"
+            },
+            {
+              "id": "text-group72",
+              "groupId": "c.4.17*",
+              "children": [],
+              "label": "Ninazu"
+            },
+            {
+              "id": "text-group73",
+              "groupId": "c.4.19*",
+              "children": [],
+              "label": "Niĝišzida"
+            },
+            {
+              "id": "text-group74",
+              "groupId": "c.4.21*",
+              "children": [],
+              "label": "Ninimma"
+            },
+            {
+              "id": "text-group75",
+              "groupId": "c.4.22*",
+              "children": [],
+              "label": "Ninisina"
+            },
+            {
+              "id": "text-group76",
+              "groupId": "c.4.23*",
+              "children": [],
+              "label": "Ninkasi"
+            },
+            {
+              "id": "text-group77",
+              "groupId": "c.4.24*",
+              "children": [],
+              "label": "Ninlil"
+            },
+            {
+              "id": "text-group78",
+              "groupId": "c.4.25*",
+              "children": [],
+              "label": "Ninšubur"
+            },
+            {
+              "id": "text-group79",
+              "groupId": "c.4.26*",
+              "children": [],
+              "label": "Nintur-Aruru"
+            },
+            {
+              "id": "text-group80",
+              "groupId": "c.4.27*",
+              "children": [],
+              "label": "Ninurta"
+            },
+            {
+              "id": "text-group81",
+              "groupId": "c.4.16*",
+              "children": [],
+              "label": "Nisaba"
+            },
+            {
+              "id": "text-group82",
+              "groupId": "c.4.28*",
+              "children": [],
+              "label": "Nungal"
+            },
+            {
+              "id": "text-group83",
+              "groupId": "c.4.29*",
+              "children": [],
+              "label": "Nuska"
+            },
+            {
+              "id": "text-group84",
+              "groupId": "c.4.30*",
+              "children": [],
+              "label": "Šara"
+            },
+            {
+              "id": "text-group85",
+              "groupId": "c.4.31*",
+              "children": [],
+              "label": "Šul-pa-e"
+            },
+            {
+              "id": "text-group86",
+              "groupId": "c.4.32*",
+              "children": [],
+              "label": "Utu"
+            },
+            {
+              "id": "text-group87",
+              "groupId": "c.4.33*",
+              "children": [],
+              "label": "Other deities"
+            }
+          ],
+          "label": "Hymns addressed to deities"
+        },
+        {
+          "id": "text-group88",
+          "groupId": "c.4.80*",
+          "children": [],
+          "label": "Hymns addressed to or concerning temples"
+        }
+      ],
+      "label": "Hymns and cult songs"
+    },
+    {
+      "id": "text-group89",
+      "groupId": "c.5*",
+      "children": [
+        {
+          "id": "text-group90",
+          "groupId": "c.5.1*",
+          "children": [],
+          "label": "Scribal life"
+        },
+        {
+          "id": "text-group91",
+          "groupId": "c.5.3*",
+          "children": [],
+          "label": "Debate poems"
+        },
+        {
+          "id": "text-group92",
+          "groupId": "c.5.4*",
+          "children": [],
+          "label": "Dialogues and diatribes"
+        },
+        {
+          "id": "text-group93",
+          "groupId": "c.5.5*",
+          "children": [],
+          "label": "Songs,  elegies and related compositions"
+        },
+        {
+          "id": "text-group94",
+          "groupId": "c.5.6*",
+          "children": [],
+          "label": "'Wisdom literature' and other compositions"
+        },
+        {
+          "id": "text-group95",
+          "groupId": "",
+          "children": [
+            {
+              "id": "text-group96",
+              "groupId": "c.5.2.4",
+              "children": [],
+              "label": "A man and his god"
+            },
+            {
+              "id": "text-group97",
+              "groupId": "c.5.2.5",
+              "children": [],
+              "label": "The poem of early rulers"
+            },
+            {
+              "id": "text-group98",
+              "groupId": "c.5.7.1",
+              "children": [],
+              "label": "Enlil and Nam-zid-tara"
+            },
+            {
+              "id": "text-group99",
+              "groupId": "c.5.7.2",
+              "children": [],
+              "label": "A dog for Nintinuga"
+            },
+            {
+              "id": "text-group100",
+              "groupId": "c.5.7.3",
+              "children": [],
+              "label": "An axe for Nergal"
+            },
+            {
+              "id": "text-group101",
+              "groupId": "c.5.9.1",
+              "children": [],
+              "label": "The home of the fish"
+            },
+            {
+              "id": "text-group102",
+              "groupId": "c.5.9.2",
+              "children": [],
+              "label": "The heron and the turtle"
+            }
+          ],
+          "label": "Various compositions"
+        },
+        {
+          "id": "text-group103",
+          "groupId": "c.6.1*",
+          "children": [],
+          "label": "Proverb collections"
+        },
+        {
+          "id": "text-group104",
+          "groupId": "c.6.2*",
+          "children": [],
+          "label": "Other proverbs"
+        }
+      ],
+      "label": "Other literature"
+    }
+  ]
