@@ -2,12 +2,32 @@ part of 'category_list_block.dart';
 
 class CategoryListState {
   bool isInit = true;
-  List<String> titleList = [];
+  List<Categoty> categories = [];
 
-  List<String> history = [];
+  List<Categoty> history = [];
 
-  String? selected() {
+  Categoty? selected() {
     if (history.isEmpty) return null;
     return history.last;
   }
+}
+
+class Categoty {
+  Categoty({
+    required this.id,
+    required this.groupId,
+    required this.label,
+  });
+
+  factory Categoty.from(Map<String, dynamic> json) {
+    return Categoty(
+      id: json['id'] ?? '',
+      groupId: json['groupId'] ?? '',
+      label: json['label'] ?? '',
+    );
+  }
+
+  final String id;
+  final String groupId;
+  final String label;
 }

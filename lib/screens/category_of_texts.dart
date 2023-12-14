@@ -31,6 +31,7 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
         create: (context) => CategoryListBloc(),
         child: BlocBuilder<CategoryListBloc, CategoryListState>(
             builder: (context, state) {
+          print("state $state");
           if (state.isInit) {
             context.read<CategoryListBloc>().add(ChildrenLoad(history: []));
             return Text("loading");
@@ -52,7 +53,7 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
           Icon(Icons.home),
         ]),
         onPressed: () {
-          List<String> newhistory = List.from(state.history, growable: true);
+          List<Categoty> newhistory = List.from(state.history, growable: true);
           newhistory.removeLast();
           context
               .read<CategoryListBloc>()
@@ -64,17 +65,17 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
     return ListView.builder(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
-      itemCount: state.titleList.length,
+      itemCount: state.categories.length,
       itemBuilder: (BuildContext context, int index) {
-        final item = state.titleList[index];
+        final item = state.categories[index];
         return ElevatedButton(
             child: Row(mainAxisSize: MainAxisSize.max, children: [
               SizedBox.square(dimension: 1),
               Icon(Icons.play_arrow),
-              Text(item),
+              Text(item.label),
             ]),
             onPressed: () {
-              List<String> newhistory = [...state.history, item];
+              List<Categoty> newhistory = [...state.history, item];
               context
                   .read<CategoryListBloc>()
                   .add(ChildrenLoad(history: newhistory));

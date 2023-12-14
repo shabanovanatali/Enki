@@ -5,9 +5,9 @@ class CategoryListEvent {}
 class ChildrenLoad extends CategoryListEvent {
   ChildrenLoad({required this.history});
 
-  List<String> history = [];
+  List<Categoty> history = [];
 
-  String? selected() {
+  Categoty? selected() {
     if (history.isEmpty) return null;
     return history.last;
   }
