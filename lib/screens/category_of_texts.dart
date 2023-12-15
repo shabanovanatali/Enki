@@ -39,6 +39,7 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
             return Column(children: [
               if (state.selected() != null) goback(context, state),
               list(context, state),
+              texts(context, state),
             ]);
           }
         }),
@@ -83,4 +84,22 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
       },
     );
   }
+}
+
+Widget texts(BuildContext context, CategoryListState state) {
+  return ListView.builder(
+    scrollDirection: Axis.vertical,
+    shrinkWrap: true,
+    itemCount: state.texts.length,
+    itemBuilder: (BuildContext context, int index) {
+      final item = state.texts[index];
+      return ElevatedButton(
+          child: Row(mainAxisSize: MainAxisSize.max, children: [
+            SizedBox.square(dimension: 1),
+            //Icon(Icons.play_arrow),
+            Text(item.label),
+          ]),
+          onPressed: () {});
+    },
+  );
 }

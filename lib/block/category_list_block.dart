@@ -21,10 +21,10 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
       final json = await load();
 
       List<Categoty> categories = [];
+      List<Texts> texts = [];
 
       final selected = event.selected();
       if (selected == null) {
-        print("selected == null");
         for (var item in json) {
           categories.add(Categoty.from(item));
         }
@@ -43,7 +43,6 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
 
         if (selected.groupId.endsWith("*")) {
           final suffix = selected.groupId.replaceAll("*", '');
-          print("selected $suffix");
 
           final con = FlutterFeathersjs();
           con.init(baseUrl: "https://data.meanings.farm");
@@ -52,7 +51,10 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
             "listId": "sumerian.literature",
             "\$startsWith": {"link": "/sumerian/text/etcsl[" + suffix}
           });
-          print("result ${result['data']}");
+
+          for (var item in result['data']) {
+            texts.add(Texts.from(item));
+          }
         }
       }
 
@@ -60,6 +62,7 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
       state.isInit = false;
       state.categories = categories;
       state.history = event.history;
+      state.texts = texts;
 
       emit(state);
     });

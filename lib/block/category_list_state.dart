@@ -3,6 +3,7 @@ part of 'category_list_block.dart';
 class CategoryListState {
   bool isInit = true;
   List<Categoty> categories = [];
+  List<Texts> texts = [];
 
   List<Categoty> history = [];
 
@@ -29,5 +30,16 @@ class Categoty {
 
   final String id;
   final String groupId;
+  final String label;
+}
+
+class Texts {
+  Texts({required this.label, required this.id});
+
+  factory Texts.from(Map<String, dynamic> data) {
+    return Texts(label: data['eng'], id: data['_id']);
+  }
+
+  final String id;
   final String label;
 }
