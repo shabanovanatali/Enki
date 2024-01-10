@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_feathersjs/flutter_feathersjs.dart';
-//import 'package:flutter_feathersjs/flutter_feathersjs.dart';
 
 part 'category_list_event.dart';
 part 'category_list_state.dart';

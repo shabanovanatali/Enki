@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meaning_farm/block/category_list_block.dart';
+import 'package:meaning_farm/screens/screen_of_text.dart';
 
 class CategoryOfTexts extends StatefulWidget {
   const CategoryOfTexts({super.key});
@@ -31,16 +32,19 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
         create: (context) => CategoryListBloc(),
         child: BlocBuilder<CategoryListBloc, CategoryListState>(
             builder: (context, state) {
-          print("state $state");
           if (state.isInit) {
             context.read<CategoryListBloc>().add(ChildrenLoad(history: []));
             return Text("loading");
           } else {
-            return Column(children: [
-              if (state.selected() != null) goback(context, state),
-              list(context, state),
-              texts(context, state),
-            ]);
+            return SingleChildScrollView(
+                physics: ScrollPhysics(),
+                child: Column(
+                  children: <Widget>[
+                    if (state.selected() != null) goback(context, state),
+                    list(context, state),
+                    texts(context, state),
+                  ],
+                ));
           }
         }),
       ),
@@ -64,7 +68,8 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
 
   Widget list(BuildContext context, CategoryListState state) {
     return ListView.builder(
-      scrollDirection: Axis.vertical,
+      // scrollDirection: Axis.vertical,
+      physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: state.categories.length,
       itemBuilder: (BuildContext context, int index) {
@@ -73,9 +78,10 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
             child: Row(mainAxisSize: MainAxisSize.max, children: [
               SizedBox.square(dimension: 1),
               Icon(Icons.play_arrow),
-              Text(item.label),
+              Flexible(child: Text(item.label)),
             ]),
             onPressed: () {
+              print("onPressed category $item");
               List<Categoty> newhistory = [...state.history, item];
               context
                   .read<CategoryListBloc>()
@@ -88,18 +94,27 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
 
 Widget texts(BuildContext context, CategoryListState state) {
   return ListView.builder(
-    scrollDirection: Axis.vertical,
+    physics: NeverScrollableScrollPhysics(),
     shrinkWrap: true,
     itemCount: state.texts.length,
     itemBuilder: (BuildContext context, int index) {
       final item = state.texts[index];
-      return ElevatedButton(
-          child: Row(mainAxisSize: MainAxisSize.max, children: [
-            SizedBox.square(dimension: 1),
-            //Icon(Icons.play_arrow),
-            Text(item.label),
-          ]),
-          onPressed: () {});
+      return TextButton(
+        child: Row(mainAxisSize: MainAxisSize.max, children: [
+          SizedBox.square(dimension: 1),
+          Icon(Icons.subject),
+          Flexible(child: Text(item.label)),
+        ]),
+        onPressed: () {
+          print("onPressed text $item");
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ScreenOfText(
+                        title: item,
+                      )));
+        },
+      );
     },
   );
 }
