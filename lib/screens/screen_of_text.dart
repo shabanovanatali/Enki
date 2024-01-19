@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meaning_farm/block/categories/category_list_block.dart';
-import 'package:meaning_farm/block/texts/text_block.dart';
+import 'package:meaning_farm/blocs/categories/category_list_bloc.dart';
+import 'package:meaning_farm/blocs/texts/text_bloc.dart';
 
 class ScreenOfText extends StatefulWidget {
   ScreenOfText({super.key, required this.text});
@@ -34,11 +34,11 @@ class _ScreenOfTextState extends State<ScreenOfText> {
           title: Text(widget.text.label),
         ),
         body: BlocProvider(
-            create: (context) => TextBlock(),
-            child: BlocBuilder<TextBlock, TextState>(builder: (context, state) {
+            create: (context) => TextBloc(),
+            child: BlocBuilder<TextBloc, TextState>(builder: (context, state) {
               if (state.isInit) {
                 context
-                    .read<TextBlock>()
+                    .read<TextBloc>()
                     .add(TextLinesRequest(text: widget.text));
                 return Text("loading");
               } else {

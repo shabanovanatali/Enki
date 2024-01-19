@@ -1,4 +1,4 @@
-part of 'category_list_block.dart';
+part of 'category_list_bloc.dart';
 
 class CategoryListEvent {}
 

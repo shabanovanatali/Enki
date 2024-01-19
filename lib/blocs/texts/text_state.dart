@@ -1,4 +1,4 @@
-part of 'text_block.dart';
+part of 'text_bloc.dart';
 
 class TextState {
   bool isInit = true;
