@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meaning_farm/block/category_list_block.dart';
+//import 'package:meaning_farm/block/text_block.dart';
 import 'package:meaning_farm/screens/screen_of_text.dart';
 
 class CategoryOfTexts extends StatefulWidget {
@@ -58,7 +59,7 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
           Icon(Icons.home),
         ]),
         onPressed: () {
-          List<Categoty> newhistory = List.from(state.history, growable: true);
+          List<Category> newhistory = List.from(state.history, growable: true);
           newhistory.removeLast();
           context
               .read<CategoryListBloc>()
@@ -82,7 +83,7 @@ class _CategoryOfTextsState extends State<CategoryOfTexts> {
             ]),
             onPressed: () {
               print("onPressed category $item");
-              List<Categoty> newhistory = [...state.history, item];
+              List<Category> newhistory = [...state.history, item];
               context
                   .read<CategoryListBloc>()
                   .add(ChildrenLoad(history: newhistory));
@@ -111,7 +112,7 @@ Widget texts(BuildContext context, CategoryListState state) {
               context,
               MaterialPageRoute(
                   builder: (context) => ScreenOfText(
-                        title: item,
+                        text: item,
                       )));
         },
       );

@@ -2,26 +2,26 @@ part of 'category_list_block.dart';
 
 class CategoryListState {
   bool isInit = true;
-  List<Categoty> categories = [];
+  List<Category> categories = [];
   List<Texts> texts = [];
 
-  List<Categoty> history = [];
+  List<Category> history = [];
 
-  Categoty? selected() {
+  Category? selected() {
     if (history.isEmpty) return null;
     return history.last;
   }
 }
 
-class Categoty {
-  Categoty({
+class Category {
+  Category({
     required this.id,
     required this.groupId,
     required this.label,
   });
 
-  factory Categoty.from(Map<String, dynamic> json) {
-    return Categoty(
+  factory Category.from(Map<String, dynamic> json) {
+    return Category(
       id: json['id'] ?? '',
       groupId: json['groupId'] ?? '',
       label: json['label'] ?? '',
@@ -34,12 +34,17 @@ class Categoty {
 }
 
 class Texts {
-  Texts({required this.label, required this.id});
+  Texts({required this.label, required this.link});
 
   factory Texts.from(Map<String, dynamic> data) {
-    return Texts(label: data['eng'], id: data['_id']);
+    return Texts(label: data['eng'], link: data['link']);
   }
 
-  final String id;
   final String label;
+  final String link;
+
+  String id() {
+    print("link $link");
+    return link.substring(15);
+  }
 }

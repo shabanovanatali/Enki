@@ -19,20 +19,20 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
     on<ChildrenLoad>((event, emit) async {
       final json = await load();
 
-      List<Categoty> categories = [];
+      List<Category> categories = [];
       List<Texts> texts = [];
 
       final selected = event.selected();
       if (selected == null) {
         for (var item in json) {
-          categories.add(Categoty.from(item));
+          categories.add(Category.from(item));
         }
       } else {
         for (var item in json) {
           if (item['id'] == selected.id) {
             final children = item['children'];
             for (var item in children) {
-              categories.add(Categoty.from(item));
+              categories.add(Category.from(item));
             }
             break;
           }
@@ -50,6 +50,8 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
             "listId": "sumerian.literature",
             "\$startsWith": {"link": "/sumerian/text/etcsl[" + suffix}
           });
+
+          print("suffix$suffix");
 
           for (var item in result['data']) {
             texts.add(Texts.from(item));

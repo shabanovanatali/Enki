@@ -4,21 +4,9 @@ class TextState {
   bool isInit = true;
   final List<Lines> lines;
 
-  TextState({this.lines = const []});
-}
-
-class TextId {
-  TextId({
-    required this.id,
-    required this.label,
+  TextState({
+    this.lines = const [],
   });
-
-  factory TextId.from(Map<String, dynamic> data) {
-    return TextId(label: data['eng'], id: data['_id']);
-  }
-
-  final String id;
-  final String label;
 }
 
 class Lines {
