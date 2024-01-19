@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meaning_farm/block/category_list_block.dart';
-import 'package:meaning_farm/block/text_block.dart';
+import 'package:meaning_farm/block/categories/category_list_block.dart';
+import 'package:meaning_farm/block/texts/text_block.dart';
 
 class ScreenOfText extends StatefulWidget {
   ScreenOfText({super.key, required this.text});

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 //import 'dart:convert';
 import 'package:flutter_feathersjs/flutter_feathersjs.dart';
-import 'package:meaning_farm/block/category_list_block.dart';
+import 'package:meaning_farm/block/categories/category_list_block.dart';
 
 part 'text_event.dart';
 part 'text_state.dart';
