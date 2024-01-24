@@ -39,18 +39,14 @@ class _ScreenOfLineState extends State<ScreenOfLine> {
                     itemCount: words.length,
                     itemBuilder: (context, index) {
                       final word = words[index];
-                      return Column(children: [
-                        SizedBox.square(dimension: 20),
-                        Row(children: [
+                      return TextButton(
+                        child: Row(children: [
                           Flexible(child: Text(word.text.word)),
                           SizedBox.square(dimension: 20),
                           Flexible(child: Text(word.cuneiform.word)),
-                          SizedBox.square(dimension: 20),
-                          Flexible(child: Text(word.pos)),
-                          SizedBox.square(dimension: 20),
-                          Flexible(child: Text(word.label)),
-                        ])
-                      ]);
+                        ]),
+                        onPressed: () {},
+                      );
                     })
               ],
             )));
