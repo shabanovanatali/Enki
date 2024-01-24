@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meaning_farm/blocs/categories/category_list_bloc.dart';
 import 'package:meaning_farm/blocs/texts/text_bloc.dart';
+import 'package:meaning_farm/screens/screen_of_line.dart';
 
 class ScreenOfText extends StatefulWidget {
   ScreenOfText({super.key, required this.text});
@@ -63,10 +64,18 @@ Widget transliteration(BuildContext context, TextState state) {
       return TextButton(
         child: Row(mainAxisSize: MainAxisSize.max, children: [
           SizedBox.square(dimension: 1),
-          // Icon(Icons.subject),
           Flexible(child: Text(item.transliteration)),
         ]),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ScreenOfLine(
+                line: item,
+              ),
+            ),
+          );
+        },
       );
     },
   );
@@ -85,7 +94,16 @@ Widget original(BuildContext context, TextState state) {
           // Icon(Icons.subject),
           Flexible(child: Text(item.original)),
         ]),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ScreenOfLine(
+                line: item,
+              ),
+            ),
+          );
+        },
       );
     },
   );

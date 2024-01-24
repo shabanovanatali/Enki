@@ -51,8 +51,6 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
             "\$startsWith": {"link": "/sumerian/text/etcsl[" + suffix}
           });
 
-          print("suffix$suffix");
-
           for (var item in result['data']) {
             texts.add(Texts.from(item));
           }
