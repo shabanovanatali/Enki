@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meaning_farm/models/line.dart';
 import 'package:meaning_farm/models/prefix_and_suffix.dart';
-import 'package:meaning_farm/screens/screen_of_vocablary.dart';
+import 'package:meaning_farm/screens/screen_of_vocabulary.dart';
 
 //import 'package:meaning_farm/screens/screen_of_vocablary.dart';
 
@@ -52,13 +52,25 @@ class _ScreenOfLineState extends State<ScreenOfLine> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Vocablary()));
+                                          builder: (context) => Vocablary(
+                                                word: word,
+                                              )));
                                 },
                                 child: Column(children: [
-                                  ListTile(
-                                    title: Text(word.cuneiform.word),
-                                    subtitle: Text(word.text.word),
-                                  ),
+                                  Row(children: [
+                                    Expanded(
+                                        flex: 2,
+                                        child: Column(children: [
+                                          Text(word.cuneiform.word),
+                                          Text(word.text.word),
+                                        ])),
+                                    Expanded(
+                                      child: Text(word.pos),
+                                    ),
+                                    Expanded(
+                                      child: Text(word.label),
+                                    )
+                                  ]),
                                   PrefixAndSuffix(
                                     word: word,
                                   )
@@ -67,45 +79,5 @@ class _ScreenOfLineState extends State<ScreenOfLine> {
                     })
               ],
             )));
-
-    // Padding(
-    //     padding: EdgeInsets.all(16.0),
-    //     child: Row(
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: <Widget>[
-    //           Expanded(
-    //               child: Card(
-    //                   margin: EdgeInsetsDirectional.symmetric(),
-    //                   child: Column(
-    //                       mainAxisSize: MainAxisSize.min,
-    //                       children: <Widget>[
-    //                         Text(widget.line.original),
-    //                         Text(widget.line.transliteration),
-    //                         ListView.builder(
-    //                             physics: NeverScrollableScrollPhysics(),
-    //                             shrinkWrap: true,
-    //                             itemCount: words.length,
-    //                             itemBuilder: (context, index) {
-    //                               final word = words[index];
-    //                               return Column(
-    //                                 children: [
-    //                                   Flexible(
-    //                                       child: Text(word.text.word)),
-    //                                   Flexible(
-    //                                       child: Text(
-    //                                           word.cuneiform.word)),
-    //                                   ListTile(
-    //                                     title: Text('Prefixes:'),
-    //                                     subtitle: Text('prefixes'),
-    //                                   ),
-    //                                   ListTile(
-    //                                     title: Text('Suffixes:'),
-    //                                     subtitle: Text('suffixes'),
-    //                                   )
-    //                                 ],
-    //                               );
-    //                             })
-    //                       ])))
-    //         ]))
   }
 }

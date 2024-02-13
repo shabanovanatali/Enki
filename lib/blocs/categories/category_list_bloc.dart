@@ -38,8 +38,6 @@ class CategoryListBloc extends Bloc<CategoryListEvent, CategoryListState> {
           }
         }
 
-        // 4210["find","listv",{"listId":"sumerian.literature","$skip":0,"$limit":20,"$startsWith":{"link":"/sumerian/text/etcsl[c.2.2"}}]
-
         if (selected.groupId.endsWith("*")) {
           final suffix = selected.groupId.replaceAll("*", '');
 
