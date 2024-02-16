@@ -5,11 +5,13 @@ class Line {
     required this.transliteration,
     required this.original,
     required this.words,
+    required this.number,
   });
 
   factory Line.from(dynamic json) {
     print("Lines.from $json");
     return Line(
+        number: json['number'],
         original: json["original"] ?? '',
         transliteration: json["transliteration"] ?? '',
         words: Split.from(json['split']));
@@ -18,4 +20,5 @@ class Line {
   final String original;
   final String transliteration;
   final Split words;
+  final String number;
 }

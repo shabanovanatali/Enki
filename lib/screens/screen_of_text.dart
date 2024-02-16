@@ -62,10 +62,10 @@ Widget transliteration(BuildContext context, TextState state) {
     itemBuilder: (BuildContext context, int index) {
       final item = state.lines[index];
       return TextButton(
-        child: Row(mainAxisSize: MainAxisSize.max, children: [
-          SizedBox.square(dimension: 1),
-          Flexible(child: Text(item.transliteration)),
-        ]),
+        child: ListTile(
+          leading: Text(item.number),
+          title: Text(item.transliteration),
+        ),
         onPressed: () {
           Navigator.push(
             context,
@@ -89,11 +89,10 @@ Widget original(BuildContext context, TextState state) {
     itemBuilder: (BuildContext context, int index) {
       final item = state.lines[index];
       return TextButton(
-        child: Row(mainAxisSize: MainAxisSize.max, children: [
-          SizedBox.square(dimension: 1),
-          // Icon(Icons.subject),
-          Flexible(child: Text(item.original)),
-        ]),
+        child: ListTile(
+          leading: Text(item.number),
+          title: Text(item.original),
+        ),
         onPressed: () {
           Navigator.push(
             context,
