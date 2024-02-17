@@ -87,7 +87,11 @@ class _ListOfTextState extends State<ListOfText> {
         return TextButton(
           child: ListTile(
             leading: Text(item.number),
-            title: Text(item.transliteration),
+            title:
+                //Column(children: [
+                // Text(item.original),
+                Text(item.transliteration),
+            //]),
           ),
           onPressed: () {
             Navigator.push(
@@ -103,31 +107,4 @@ class _ListOfTextState extends State<ListOfText> {
       },
     );
   }
-}
-
-Widget original(BuildContext context, TextState state) {
-  return ListView.builder(
-    physics: NeverScrollableScrollPhysics(),
-    shrinkWrap: true,
-    itemCount: state.lines.length,
-    itemBuilder: (BuildContext context, int index) {
-      final item = state.lines[index];
-      return TextButton(
-        child: ListTile(
-          leading: Text(item.number),
-          title: Text(item.original),
-        ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ScreenOfLine(
-                line: item,
-              ),
-            ),
-          );
-        },
-      );
-    },
-  );
 }
