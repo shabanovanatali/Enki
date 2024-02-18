@@ -23,11 +23,12 @@ class _ScreenOfLineState extends State<ScreenOfLine> {
   @override
   Widget build(BuildContext context) {
     final words = widget.line.words.split;
+    final numberLine = widget.line.number.toString();
 
     print("words $words");
     return Scaffold(
         appBar: AppBar(
-          title: Text(""),
+          title: Text("Line $numberLine"),
         ),
         body: SingleChildScrollView(
             physics: ScrollPhysics(),
